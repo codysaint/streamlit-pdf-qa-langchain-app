@@ -11,7 +11,9 @@ st.set_page_config(
     page_icon=assistant_logo
 )
 
-openai_api_key = st.sidebar.text_input('Input your OpenAI API Key', value="sk-", type = 'password')
+with st.sidebar:
+    openai_api_key = st.text_input('Input your OpenAI API Key', value="sk-", type = 'password')
+    "[View the source code](https://github.com/codysaint/streamlit-pdf-qa-langchain-app.git)"
 
 
 # Initialize chat history
